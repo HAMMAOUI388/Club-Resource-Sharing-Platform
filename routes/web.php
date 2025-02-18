@@ -12,10 +12,8 @@ use App\Http\Controllers\StackOverflowController;
 
 
 Route::get('/', function () {
-    // Fetch events
     $events = Event::all();
 
-    // Fetch forum questions from Stack Overflow API
     $response = Http::get('https://api.stackexchange.com/2.3/questions', [
         'order' => 'desc',
         'sort' => 'activity',
@@ -23,9 +21,8 @@ Route::get('/', function () {
     ]);
     Log::info($response->json());
 
-    // Check the response
     if ($response->successful()) {
-        $questions = $response->json()['items']; // Stack Overflow returns 'items' with the questions
+        $questions = $response->json()['items'];
     } else {
         $questions = [];
     }
@@ -67,10 +64,8 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->midd
 
 
 // routes/web.php
-
-
-Route::get('/login/stackoverflow', [StackOverflowController::class, 'redirectToProvider']); // Redirect to Stack Overflow
-Route::get('/callback', [StackOverflowController::class, 'handleProviderCallback']); // Handle the callback after authentication
+Route::get('/login/stackoverflow', [StackOverflowController::class, 'redirectToProvider']);
+Route::get('/callback', [StackOverflowController::class, 'handleProviderCallback']);
 Route::post('/post-question', [StackOverflowController::class, 'postQuestion'])->name('post.question');
 Route::post('/post-answer', [StackOverflowController::class, 'postAnswer'])->name('post.answer');
 

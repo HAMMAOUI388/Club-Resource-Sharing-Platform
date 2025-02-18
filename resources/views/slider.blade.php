@@ -11,7 +11,6 @@
 <body>
 
 
-    <!-- carousel -->
     <div class="carousel">
         <!-- list item -->
         <div class="list">

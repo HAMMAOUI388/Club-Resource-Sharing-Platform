@@ -15,7 +15,7 @@
                 @foreach($events as $event)
                     <div class="event-card">
                         @if(file_exists(public_path('storage/images/' . $event->photo)))
-                            <a href="{{ route('events.show', $event->id) }}" class="event-link"> <!-- Wrap the card with a link -->
+                            <a href="{{ route('events.show', $event->id) }}" class="event-link">
                                 <div class="event-img-container">
                                     <img src="{{ asset('storage/images/' . $event->photo) }}" alt="{{ $event->title }}" class="event-img">
                                     <div class="event-info">

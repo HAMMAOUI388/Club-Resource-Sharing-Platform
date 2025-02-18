@@ -13,7 +13,7 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::all();
-        return view('event', ['events' => $events]); // Now events will be available in Blade
+        return view('event', ['events' => $events]);
     }
 
 
@@ -21,7 +21,7 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::findOrFail($id);
-        return view('single_event', compact('event')); // New Blade file for single event
+        return view('single_event', compact('event'));
     }
 
 
