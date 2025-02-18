@@ -9,13 +9,7 @@
 
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="">Home</a>
-            <a href="">Contacts</a>
-            <a href="">Info</a>
-        </nav>
-    </header>
+
 
     <!-- carousel -->
     <div class="carousel">
@@ -24,9 +18,9 @@
             <div class="item">
                 <img src="{{ asset('slider/images/1img.jpeg') }}" alt="Slider Image">
                 <div class="content">
-                    <div class="author">LUNDEV</div>
+                    <div class="author">INSUYTRY4.0</div>
                     <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">ANIMAL</div>
+                    <div class="topic">Theme dyal chi haja</div>
                     <div class="des">
                         <!-- lorem 50 -->
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
@@ -40,9 +34,9 @@
             <div class="item">
                 <img src="{{ asset('slider/images/2img.jpeg') }}" alt="Slider Image">
                 <div class="content">
-                    <div class="author">LUNDEV</div>
+                    <div class="author">qwer</div>
                     <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">ANIMAL</div>
+                    <div class="topic">theme</div>
                     <div class="des">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
                     </div>
@@ -55,9 +49,9 @@
             <div class="item">
                 <img src="{{ asset('slider/images/3img.jpeg') }}" alt="Slider Image">
                 <div class="content">
-                    <div class="author">LUNDEV</div>
+                    <div class="author">czjyxcvb</div>
                     <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">ANIMAL</div>
+                    <div class="topic">chi haja</div>
                     <div class="des">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
                     </div>
@@ -70,9 +64,9 @@
             <div class="item">
                 <img src="{{ asset('slider/images/4img.jpeg') }}" alt="Slider Image">
                 <div class="content">
-                    <div class="author">LUNDEV</div>
+                    <div class="author">poiuztjhg</div>
                     <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">ANIMAL</div>
+                    <div class="topic">ci haja 3awd</div>
                     <div class="des">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
                     </div>

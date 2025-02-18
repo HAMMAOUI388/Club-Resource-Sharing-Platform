@@ -10,8 +10,12 @@
 
 </head>
 <body>
-        <!-- Include Slider -->
+        @include('navbar')
         @include('slider')
+        @include('presentation')
+        @include('event')
+        @include('forum')
+        @include('footer')
         <script src="{{ asset('slider/app.js') }}"></script>
 </body>
 </html>
