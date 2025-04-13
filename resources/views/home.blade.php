@@ -10,12 +10,13 @@
 
 </head>
 <body>
-        @include('navbar')
-        @include('slider')
-        @include('presentation')
-        @include('event')
-        @include('forum')
-        @include('footer')
-        <script src="{{ asset('slider/app.js') }}"></script>
+    @include('navbar')
+    @include('slider')
+    @include('presentation')
+    @include('event')
+    @include('post')
+    @include('ressources')
+    @include('footer')
+
 </body>
 </html>

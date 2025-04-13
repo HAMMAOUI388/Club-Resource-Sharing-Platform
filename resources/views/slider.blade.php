@@ -19,7 +19,7 @@
                 <div class="content">
                     <div class="author">INSUYTRY4.0</div>
                     <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">Theme dyal chi haja</div>
+                    <div class="topic">Theme</div>
                     <div class="des">
                         <!-- lorem 50 -->
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
@@ -126,8 +126,8 @@
         <!-- next prev -->
 
         <div class="arrows">
-            <button id="prev"><</button>
-            <button id="next">></button>
+            <button id="prev">&#8249;</button>
+            <button id="next">&#8250;</button>
         </div>
         <!-- time running -->
         <div class="time"></div>

@@ -9,19 +9,23 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('questions', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('posts', function (Blueprint $table) {
+            $table->string('slug')->nullable();
+
         });
     }
+    
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('questions');
+        Schema::table('posts', function (Blueprint $table) {
+            $table->dropColumn('slug');
+        });
     }
+    
 };

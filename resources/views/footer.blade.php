@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indusry 4.0</title>
-    <link rel="stylesheet" href="{{ asset('slider/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
 
 </head>

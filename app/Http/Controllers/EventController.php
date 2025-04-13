@@ -7,6 +7,7 @@ use App\Models\EventRegistration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Redirect;
+use App\Models\Post;
 
 class EventController extends Controller
 {
@@ -14,6 +15,13 @@ class EventController extends Controller
     {
         $events = Event::all();
         return view('event', ['events' => $events]);
+
+                // Get a post to display in the home view
+                $post = Post::with('comments.user')->first(); // Adjust logic if you want a specific post
+
+                // Pass the post to the view
+                return view('home', compact('post'));
+
     }
 
 

@@ -1,0 +1,101 @@
+/* === Global Form Style === */
+.ressources-section {
+    max-width: 1140px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #b4613b;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ressources-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+}
+
+.ressources-section form {
+    margin-bottom: 30px;
+}
+
+.ressources-section input[type="text"],
+.ressources-section input[type="file"] {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.ressources-section input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.ressources-section button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.ressources-section .btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.ressources-section .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.ressources-section .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.ressources-section .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* === Resource Cards === */
+.resource-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #212529;
+}
+
+.resource-card p {
+    margin: 5px 0 10px;
+    color: #555;
+}
+
+.resource-card a.btn-success {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.resource-card a.btn-success:hover {
+    background-color: #218838;
+}
