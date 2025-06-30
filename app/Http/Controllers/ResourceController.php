@@ -13,26 +13,25 @@ use Illuminate\Support\Facades\Log;
 class ResourceController extends Controller
 {
 
+
+    
     public function index(Request $request)
-    {
-        // Fetch resources based on the search query, if present
-        $resources = Resource::query();
-        
-        if ($request->has('field')) {
-            $resources->where('field', 'like', '%' . $request->field . '%');
-        }
-        
-        if ($request->has('module')) {
-            $resources->where('module', 'like', '%' . $request->module . '%');
-        }
-        
-        $resources = $resources->get();  // Execute the query to get the resources
-    
-        // Pass resources to the view
-        return view('ressources', compact('resources'));
+{
+    $resources = Resource::query();
+
+    if ($request->filled('field')) {
+        $resources->where('field', 'like', '%' . $request->field . '%');
     }
-    
-    
+
+    if ($request->filled('module')) {
+        $resources->where('module', 'like', '%' . $request->module . '%');
+    }
+
+    $resources = $resources->latest()->get();
+
+    return view('resources.index', compact('resources'));
+}
+
     
     
 

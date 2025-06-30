@@ -8,33 +8,41 @@
     @yield('event')
 </head>
 <body>
-    <div class="container">
+    <div class="event-container">
         <h1 class="section-title">Upcoming Events</h1>
 
         @if(isset($events) && $events->isNotEmpty())
             <div class="events-grid">
-                @foreach($events as $event)
-                    <div class="event-card">
-                        @if(file_exists(public_path('storage/images/' . $event->photo)))
-                            <a href="{{ route('events.show', $event->id) }}" class="event-link">
-                                <div class="event-img-container">
-                                    <img src="{{ asset('storage/images/' . $event->photo) }}" alt="{{ $event->title }}" class="event-img">
-                                    <div class="event-info">
-                                        <h3>{{ $event->title }}</h3>
-                                        <p>{{ \Carbon\Carbon::parse($event->date)->format('F j, Y') }}</p>
-                                        <p class="event-description">{{ $event->description }}</p>
-                                        <form action="{{ route('events.register', $event->id) }}" method="POST" class="register-form">
-                                            @csrf
-                                            <button type="submit" class="register-btn">REGISTER TO EVENT</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </a>
-                        @else
-                            <p>Image not found: {{ 'storage/images/' . $event->photo }}</p>
-                        @endif
+@foreach($events as $event)
+    <div class="event-card">
+        @if(file_exists(public_path('storage/images/' . $event->photo)))
+            <a href="{{ route('events.show', $event->id) }}" class="event-link">
+                <div class="event-img-container">
+                    <img src="{{ asset('storage/images/' . $event->photo) }}" alt="{{ $event->title }}" class="event-img">
+                    <div class="event-info">
+                        <h3>{{ $event->title }}</h3>
+                        <p>{{ \Carbon\Carbon::parse($event->date)->format('F j, Y') }}</p>
+                        <p class="event-description">{{ $event->description }}</p>
+
+                        <!-- Buttons appear on hover -->
+                        <div class="event-buttons">
+                            @auth
+<a href="{{ route('events.show', $event->id) }}" class="register-btn">REGISTER TO EVENT</a>
+
+                            @else
+                                <a href="{{ route('login') }}" class="register-btn">LOGIN TO REGISTER</a>
+                            @endauth
+                        </div>
                     </div>
-                @endforeach
+                </div>
+            </a>
+        @else
+            <p>Image not found: {{ 'storage/images/' . $event->photo }}</p>
+        @endif
+    </div>
+@endforeach
+
+
             </div>
         @else
             <p class="no-events">No upcoming events at the moment.</p>
@@ -64,3 +72,8 @@
     </script>
 </body>
 </html>
+
+
+
+
+

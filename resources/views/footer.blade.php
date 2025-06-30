@@ -4,8 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indusry 4.0</title>
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+<style>
+    .footer{
+        max-width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
 
+.footer-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1;
+    padding: 1rem;
+}
+.footer-leftt {
+    flex: 1;
+    padding: 1rem;
+
+}
+
+.footer-logoo {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex: 3;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 90%;
+}
+
+.footer-column {
+    padding: 1rem;
+}
+
+.footer h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin: 0.5rem 0;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #f1683a;
+}
+
+.footer form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.footer input[type="email"], .footer textarea {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    color: #000;
+}
+
+.footer button {
+    padding: 0.75rem;
+    background-color: #f1683a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer button:hover {
+    background-color: #0056b3;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: #bbb;
+}
+
+@media (max-width: 768px) {
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+</style>
 
 </head>
 <body>

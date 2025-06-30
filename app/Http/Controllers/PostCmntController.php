@@ -99,5 +99,12 @@ class PostCmntController extends Controller
 
 
 
+public function community()
+{
+    $posts = Post::with('user', 'comments.user')->latest()->get();
+    return view('posts.community', compact('posts'));
+}
+
+
     
 }

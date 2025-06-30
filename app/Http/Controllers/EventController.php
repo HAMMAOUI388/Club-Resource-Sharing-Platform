@@ -11,44 +11,45 @@ use App\Models\Post;
 
 class EventController extends Controller
 {
-    public function index()
-    {
-        $events = Event::all();
-        return view('event', ['events' => $events]);
-
-                // Get a post to display in the home view
-                $post = Post::with('comments.user')->first(); // Adjust logic if you want a specific post
-
-                // Pass the post to the view
-                return view('home', compact('post'));
-
-    }
 
 
+public function index()
+{
+    $events = Event::all();
+    return view('event', ['events' => $events]);
+}
 
-    public function show($id)
+
+public function show($id)
     {
         $event = Event::findOrFail($id);
         return view('single_event', compact('event'));
     }
 
-
-    public function register(Request $request, $id)
+public function showRegistrationForm($id)
 {
     $event = Event::findOrFail($id);
+    return view('registeraevent', compact('event'));
+}
 
-    $request->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|email|max:255',
-    ]);
+
+public function register(Request $request, $id)
+{
+    $event = Event::findOrFail($id);
+    $user = $request->user();
+
+    // Check if already registered (optional)
+    // if(EventRegistration::where('event_id', $event->id)->where('email', $user->email)->exists()) {
+    //     return redirect()->route('events.show', $event->id)->with('success', 'You are already registered.');
+    // }
 
     EventRegistration::create([
         'event_id' => $event->id,
-        'name' => $request->name,
-        'email' => $request->email,
+        'name' => $user->name,
+        'email' => $user->email,
     ]);
 
-    return redirect()->route('events.show', ['id' => $event->id])->with('success', 'Inscription réussie!');
+    return redirect()->route('events.show', $id)->with('success', 'You are successfully registered to attend this event.');
 }
 
 

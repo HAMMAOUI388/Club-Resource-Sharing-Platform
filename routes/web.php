@@ -68,15 +68,24 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/posts/{slug}', [PostCmntController::class, 'show'])->name('posts.show');
 
+Route::get('/community', [PostCmntController::class, 'community'])->name('posts.community');
+
+
+
 Route::middleware(['auth'])->group(function () {
     Route::post('/resources', [ResourceController::class, 'store'])->name('resources.store');
     Route::get('/resources', [ResourceController::class, 'index'])->name('resources.index');
 });
 
 
+
+
+
+
 Route::get('/events', [EventController::class, 'index']);
 Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');
-Route::post('/events/{id}/register', [EventController::class, 'register'])->name('events.register');
+Route::get('/events/{id}/register', [EventController::class, 'showRegistrationForm'])->middleware('auth')->name('events.register.form');
+Route::post('/events/{id}/register', [EventController::class, 'register'])->name('events.register')->middleware('auth');
 
 
 Route::middleware('guest')->group(function () {
@@ -95,6 +104,18 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->midd
 
 
 Route::get('/all-questions', [QuestionController::class, 'index'])->name('all-questions');
+
+
+
+
+
+Route::get('/about-club', function () {
+    return view('about-club');
+})->name('about-club');
+
+
+
+
 
 
 require __DIR__.'/auth.php';

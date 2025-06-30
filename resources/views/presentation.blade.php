@@ -123,7 +123,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .see-more-button {
@@ -203,7 +203,7 @@ body {
 <section class="presentation-section">
     <div class="contentt-about">
         <p class="about-text">See more about the club</p>
-        <button class="see-more-button">See More</button>
+        <a href="{{ route('about-club') }}" class="see-more-button">SEE MORE</a>
     </div>
 </section>
 

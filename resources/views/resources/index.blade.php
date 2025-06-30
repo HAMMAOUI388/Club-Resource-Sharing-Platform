@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training Resources</title>
-    <link rel="stylesheet" href="{{ asset('css/ressources.css') }}">
-</head>
-<body>
-    <h2>Training Resources</h2>
+@push('title', 'Resources | Industry 4.0')
+<x-app-layout>
 
+    <section>
+    <h2>Training Resources</h2>
     <div class="ressources-section">
 
         {{-- Message for guests --}}
@@ -83,9 +77,5 @@
         @endisset
 
     </div>
-    <div class="see-more-wrapper">
-        <a href="{{ route('resources.index') }}" class="see-more-btn">SEE MORE</a>
-    </div>
-
-</body>
-</html>
+    </section>
+</x-app-layout>
