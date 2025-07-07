@@ -16,7 +16,9 @@
     @include('event')
     @include('post')
     @include('ressources')
-    @include('footer')
 
+    <footer id="contact">
+        @include('partials.footer')
+    </footer>
 </body>
 </html>

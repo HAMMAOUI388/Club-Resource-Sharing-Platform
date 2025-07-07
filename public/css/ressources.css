@@ -15,6 +15,17 @@ h2 {
     color: #ffffff;
     margin-bottom: 1.5rem;
     font-family: 'Poppins', sans-serif;
+    
+}
+.h2{
+    text-align: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    
 }
 
 /* Forms */
@@ -25,22 +36,11 @@ h2 {
     margin-right: 40px;
 }
 
+/* Inputs and File Inputs */
 .ressources-section input[type="text"],
-.ressources-section input[type="file"] {
-    width: 100%;
-    padding: 18px 18px;
-    border-radius: 12px;
-    border: 2px solid #333;
-    background: #1a1a1a;
-    color: #eee;
-    font-size: 15px;
-    margin-bottom: 15px;
-    transition: border-color 0.3s ease;
-}
-
-
+.ressources-section input[type="file"],
 .ressources-section select {
-    width: 1040px;
+    width: 1040px; /* same fixed width for inputs and select on desktop */
     padding: 18px 18px;
     border-radius: 12px;
     border: 2px solid #333;
@@ -50,6 +50,11 @@ h2 {
     margin-bottom: 15px;
     font-family: 'Poppins', sans-serif;
     transition: border-color 0.3s ease;
+    box-sizing: border-box; /* include padding and border in width */
+}
+
+/* Select specific styles */
+.ressources-section select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -60,13 +65,8 @@ h2 {
     cursor: pointer;
 }
 
-.ressources-section select:focus {
-    border-color: #f1683a;
-    outline: none;
-    background: #222;
-}
-
-
+/* Focus styles */
+.ressources-section select:focus,
 .ressources-section input[type="text"]:focus,
 .ressources-section input[type="file"]:focus {
     border-color: #f1683a;
@@ -144,6 +144,25 @@ h2 {
     color: #000;
 }
 
+.btn-primary , .btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.btn-success:hover , .btn-secondary:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 /* Guest message */
 .ressources-section > p {
     font-weight: 600;
@@ -193,15 +212,13 @@ h2 {
         margin-left: 0;
         margin-right: 0;
     }
+
+    /* Make inputs and select full width on mobile */
+    .ressources-section input[type="text"],
+    .ressources-section input[type="file"],
+    .ressources-section select {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

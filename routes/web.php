@@ -38,7 +38,7 @@ use App\Models\Resource;
 Route::get('/', function () {
     $events = Event::all();
     $posts = \App\Models\Post::latest()->with('comments.user')->get();
-    $resources = Resource::latest()->get(); // Add this line ✅
+    $resources = Resource::latest()->take(3)->get();
 
     $response = Http::get('https://api.stackexchange.com/2.3/questions', [
         'order' => 'desc',
@@ -76,6 +76,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/resources', [ResourceController::class, 'store'])->name('resources.store');
     Route::get('/resources', [ResourceController::class, 'index'])->name('resources.index');
 });
+
 
 
 

@@ -2,7 +2,7 @@
 <x-app-layout>
 
     <section>
-    <h2>Training Resources</h2>
+    <h2 class="h2">Training Resources</h2>
     <div class="ressources-section">
 
         {{-- Message for guests --}}

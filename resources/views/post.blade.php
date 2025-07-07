@@ -32,7 +32,7 @@
     <h2 class="feed-title">Latest Community Posts</h2>
 </div>
     <!-- Feed Section -->
-    <div id="feed-section">
+<div id="feed-section" class="feed-scrollable">
         <div id="feed">
             @if(isset($posts) && $posts->isNotEmpty())
                 @foreach ($posts as $post)

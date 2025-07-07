@@ -1,3 +1,8 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+}
+
 /* Container */
 .posts-container, #post-container {
     max-width: 1140px;
@@ -18,13 +23,8 @@
     background: #222;
     border-radius: 16px;
     padding: 25px 30px;
-    /* box-shadow: 0 6px 18px rgba(241, 104, 58, 0.25); */
-    /* transition: box-shadow 0.3s ease; */
     margin-bottom: 40px;
-
-
 }
-
 
 .create-post-form .form-group {
     margin-bottom: 20px;
@@ -40,7 +40,7 @@
 
 .create-post-form input[type="text"],
 .create-post-form textarea {
-    width: 1000px;
+    width: 100%;
     background: #1a1a1a;
     border: 2px solid #333;
     border-radius: 12px;
@@ -73,33 +73,38 @@
     display: inline-block;
     text-align: center;
     text-decoration: none;
+    border-radius: 0%;
 }
 
 .create-post-form .submit-btn:hover {
     background-color: #fff;
     color: #000;
 }
-
-
-
-.post-content {
-    background-color: #292929;
-    padding: 20px 25px;
-    border-radius: 14px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(241, 104, 58, 0.25);
-    border: 2px solid #f1683a;
-}
-
-/* Feed Section */
-#feed-section {
+/* feed section in the home page */
+#feed-section.feed-full {
+    max-height: none;
+    overflow: visible;
     background-color: #121212;
     border-radius: 16px;
     padding: 25px 30px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+
+}
+
+
+
+/* feed Section in the community page */
+#feed-section.feed-scrollable {
     max-height: 520px;
     overflow-y: auto;
+    background-color: #121212;
+    border-radius: 16px;
+    padding: 25px 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+
 }
+
+
 
 /* Feed Title */
 .feed-title {
@@ -122,8 +127,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-
 .post.card .card-title {
     font-weight: 700;
     font-size: 24px;
@@ -136,7 +139,11 @@
     line-height: 1.6;
     color: #ddd;
     margin-bottom: 14px;
+    word-wrap: break-word;       /* allow breaking long words */
+    overflow-wrap: break-word;   /* modern support */
+    word-break: break-word;      /* break long words when necessary */
 }
+
 
 .post.card .text-muted {
     color: #999 !important;
@@ -160,7 +167,11 @@
     line-height: 1.4;
     box-shadow: inset 0 0 8px #f1683a22;
     transition: background-color 0.3s ease;
+    word-wrap: break-word;       /* ensures words break */
+    overflow-wrap: break-word;   /* modern support */
+    word-break: break-word;      /* fallback for long words */
 }
+
 
 .comment:hover {
     background-color: #3a3a3a;
@@ -183,10 +194,10 @@
     border-radius: 16px;
     border: 1px solid #333;
     margin-top: 20px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
 }
 
 .comment-form label {
@@ -199,18 +210,18 @@
 }
 
 .comment-form textarea {
-    width: 90%;
+    width: 100%;
     min-height: 70px;
     background: #2b2b2b;
     border: 2px solid #444;
     border-radius: 12px;
     color: #eee;
-    margin: 20px;
     padding: 14px 16px;
     font-size: 14.5px;
     resize: vertical;
     transition: border-color 0.3s ease;
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 .comment-form textarea:focus {
@@ -298,18 +309,27 @@
         padding: 20px 15px;
     }
 
-    .post.card {
-        padding: 20px 18px;
-    }
-
-    .create-post-form {
-        padding: 20px 18px;
-        max-width: 100%;
-        margin: 0 10px 40px;
-    }
-
+    .post.card,
+    .create-post-form,
     .comment-form {
-        max-width: 100%;
-        margin: 20px 10px;
+        padding: 16px;
+        margin: 16px 8px;
+        width: auto;
+    }
+
+    .create-post-form input[type="text"],
+    .create-post-form textarea,
+    .comment-form textarea {
+        width: 100%;
+    }
+
+    .comment-form textarea {
+        font-size: 14px;
+    }
+
+    .see-more-button,
+    .see-more-btn {
+        padding: 8px 16px;
+        font-size: 14px;
     }
 }

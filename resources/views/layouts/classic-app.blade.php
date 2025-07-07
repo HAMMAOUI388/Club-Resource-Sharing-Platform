@@ -11,8 +11,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+
     <style>
-        /* Your custom styles here */
+        body {
+            background-color: #000;
+            color: #eee;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f1683a;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #f1683a;
+            margin-bottom: 1rem;
+        }
+
+        .btn-primary {
+            background-color: #f1683a;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .btn-primary:hover {
+            background-color: #d75c2f;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        label {
+            font-weight: 500;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .alert-success {
+            background-color: #28a745;
+            padding: 0.75rem;
+            color: white;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -22,6 +82,7 @@
         <main>
             @yield('content')
         </main>
+        @include('partials.footer')
     </div>
 </body>
 </html>

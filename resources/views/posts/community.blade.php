@@ -35,7 +35,7 @@
     <hr class="my-4">
 
     <!-- Feed Section -->
-    <div id="feed-section">
+    <div id="feed-section" class="feed-full">
         <h4 class="feed-title">Latest Community Posts</h4>
         <div id="feed">
             @if($posts->isNotEmpty())
