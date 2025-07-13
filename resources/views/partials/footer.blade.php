@@ -181,15 +181,9 @@ x-app-layout, section {
   color: #bbb;
 }
 
-/* ✅ Responsive for mobile */
 @media (max-width: 768px) {
-  .footerr-grid {
+  .footerr-containerr {
     grid-template-columns: 1fr;
-  }
-
-  .logo-column {
-    justify-content: center;
-    margin-bottom: 1rem;
   }
 
   .footerr-column {
@@ -199,7 +193,12 @@ x-app-layout, section {
   .footerr form {
     width: 100%;
   }
+
+  .footerr-logo {
+    margin: 0 auto 1rem auto;
+  }
 }
+
 
 
 
