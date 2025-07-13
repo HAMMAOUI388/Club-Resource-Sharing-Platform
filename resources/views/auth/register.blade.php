@@ -1,5 +1,4 @@
 @push('title', 'Register | Industry 4.0')
-
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
         @csrf

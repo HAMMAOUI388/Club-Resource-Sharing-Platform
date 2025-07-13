@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indusry 4.0</title>
-    <link rel="stylesheet" href="{{ asset('slider/style.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('slider/style.css') }}">
 
     @vite(['resources/js/app.js']) <!-- This loads both JS and CSS from Vite -->
 

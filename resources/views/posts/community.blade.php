@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="{{ asset('css/post.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('css/post.css') }}">
 
 <div class="container" id="post-container">
     @auth

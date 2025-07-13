@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industry 4.0</title>
-    <link rel="stylesheet" href="{{ asset('css/event.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/event.css') }}">
     @vite(['resources/js/app.js']) <!-- This loads both JS and CSS from Vite -->
 
     @yield('event')
