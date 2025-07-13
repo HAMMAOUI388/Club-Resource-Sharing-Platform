@@ -6,6 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Industry 4.0</title>
     <link rel="stylesheet" href="{{ asset('css/post.css') }}">
+        @vite(['resources/js/app.js']) <!-- This loads both JS and CSS from Vite -->
+
 </head>
 <body>
 

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training Resources</title>
     <link rel="stylesheet" href="{{ asset('css/ressources.css') }}">
+        @vite(['resources/js/app.js']) <!-- This loads both JS and CSS from Vite -->
+
 </head>
 <body>
     <h2>Training Resources</h2>

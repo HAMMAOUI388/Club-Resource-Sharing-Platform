@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Industry 4.0</title>
+@vite(['resources/js/app.js']) <!-- This loads both JS and CSS from Vite -->
+
 </head>
 <style>
   /* General Styling */

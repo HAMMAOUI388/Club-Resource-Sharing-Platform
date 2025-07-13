@@ -6,6 +6,7 @@
     <title>Indusry 4.0</title>
     <link rel="stylesheet" href="{{ asset('slider/style.css') }}">
 
+    @vite(['resources/js/app.js']) <!-- This loads both JS and CSS from Vite -->
 
 </head>
 <body>

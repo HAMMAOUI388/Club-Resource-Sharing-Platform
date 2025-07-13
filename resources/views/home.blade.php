@@ -6,11 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Industry 4.0</title>
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
-    @vite(['resources/js/app.js']) <!-- This loads both JS and CSS from Vite -->
 
+    {{-- Vite-built CSS & JS --}}
+    @vite(['resources/js/app.js'])
 
-
+    {{-- Raw CSS files --}}
+    <link rel="stylesheet" href="{{ asset('css/event.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/post.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ressources.css') }}">
+    <link rel="stylesheet" href="{{ asset('slider/style.css') }}">
 </head>
+
 <body>
     @include('navbar')
     @include('slider')
