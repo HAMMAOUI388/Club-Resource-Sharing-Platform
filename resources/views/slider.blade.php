@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indusry 4.0</title>
-    <link rel="stylesheet" href="{{ secure_asset('slider/style.css') }}">
+    <link rel="stylesheet" href="{{ secure_secure_asset('slider/style.css') }}">
 
     @vite(['resources/js/app.js']) <!-- This loads both JS and CSS from Vite -->
 
@@ -16,7 +16,7 @@
         <!-- list item -->
         <div class="list">
             <div class="item">
-                <img src="{{ asset('slider/images/1img.jpeg') }}" alt="Slider Image">
+                <img src="{{ secure_asset('slider/images/1img.jpeg') }}" alt="Slider Image">
                 <div class="content">
                     <div class="author">INSUYTRY4.0</div>
                     <div class="title">DESIGN SLIDER</div>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="{{ asset('slider/images/2img.jpeg') }}" alt="Slider Image">
+                <img src="{{ secure_asset('slider/images/2img.jpeg') }}" alt="Slider Image">
                 <div class="content">
                     <div class="author">qwer</div>
                     <div class="title">DESIGN SLIDER</div>
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="{{ asset('slider/images/3img.jpeg') }}" alt="Slider Image">
+                <img src="{{ secure_asset('slider/images/3img.jpeg') }}" alt="Slider Image">
                 <div class="content">
                     <div class="author">czjyxcvb</div>
                     <div class="title">DESIGN SLIDER</div>
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="{{ asset('slider/images/4img.jpeg') }}" alt="Slider Image">
+                <img src="{{ secure_asset('slider/images/4img.jpeg') }}" alt="Slider Image">
                 <div class="content">
                     <div class="author">poiuztjhg</div>
                     <div class="title">DESIGN SLIDER</div>
@@ -80,7 +80,7 @@
         <!-- list thumnail -->
         <div class="thumbnail">
             <div class="item">
-                <img src="{{ asset('slider/images/1img.jpeg') }}" alt="Slider Image">
+                <img src="{{ secure_asset('slider/images/1img.jpeg') }}" alt="Slider Image">
                 <div class="content">
                     <div class="title">
                         Name Slider
@@ -91,7 +91,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="{{ asset('slider/images/2img.jpeg') }}" alt="Slider Image">
+                <img src="{{ secure_asset('slider/images/2img.jpeg') }}" alt="Slider Image">
                 <div class="content">
                     <div class="title">
                         Name Slider
@@ -102,7 +102,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="{{ asset('slider/images/3img.jpeg') }}" alt="Slider Image">
+                <img src="{{ secure_asset('slider/images/3img.jpeg') }}" alt="Slider Image">
                 <div class="content">
                     <div class="title">
                         Name Slider
@@ -113,7 +113,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="{{ asset('slider/images/4img.jpeg') }}" alt="Slider Image">
+                <img src="{{ secure_asset('slider/images/4img.jpeg') }}" alt="Slider Image">
                 <div class="content">
                     <div class="title">
                         Name Slider
@@ -134,5 +134,5 @@
         <div class="time"></div>
     </div>
 
-    <script src="{{ asset('slider/app.js') }}"></script></body>
+    <script src="{{ secure_secure_asset('slider/app.js') }}"></script></body>
 </html>
