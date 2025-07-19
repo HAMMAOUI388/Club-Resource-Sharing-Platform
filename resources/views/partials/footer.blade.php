@@ -47,9 +47,14 @@
     </div>
   </div>
 
-  <div class="footerr-bottom">
-    <p>&copy; 2025 Industry 4.0. All rights reserved.</p>
-  </div>
+<div class="footerr-bottom">
+  <p>&copy; 2025 Industry 4.0. All rights reserved.</p>
+  <p>Developed by 
+    <a href="https://www.linkedin.com/in/fatima-ezzahra-hammaoui-28a316253/" target="_blank" style="color: inherit; text-decoration: underline;">
+      HAMMAOUI Fatima Ezzahra
+    </a>
+  </p>
+</div>
 </footer>
 
 
