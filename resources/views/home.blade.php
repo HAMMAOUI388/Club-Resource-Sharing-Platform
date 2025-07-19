@@ -8,6 +8,7 @@
     <link rel="icon" href="{{ secure_asset('favicon.ico') }}" type="image/x-icon">
 
     {{-- Vite-built CSS & JS --}}
+    @vite(['resources/js/app.js'])
 
     {{-- Raw CSS files --}}
     <link rel="stylesheet" href="{{ secure_asset('css/event.css') }}">
