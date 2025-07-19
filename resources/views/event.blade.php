@@ -20,7 +20,7 @@
         @if(file_exists(public_path('storage/images/' . $event->photo)))
             <a href="{{ route('events.show', $event->id) }}" class="event-link">
                 <div class="event-img-container">
-                    <img src="{{ asset('storage/images/' . $event->photo) }}" alt="{{ $event->title }}" class="event-img">
+                    <img src="{{ secure_asset('storage/images/' . $event->photo) }}" alt="{{ $event->title }}" class="event-img">
                     <div class="event-info">
                         <h3>{{ $event->title }}</h3>
                         <p>{{ \Carbon\Carbon::parse($event->date)->format('F j, Y') }}</p>
